@@ -1,0 +1,232 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+body
+{
+    font-family: arial;
+    overflow-x: hidden;
+}
+
+.container
+{
+    background-color: #303030;
+    min-width: 100vw;
+    min-height: 100vh;
+    padding-top: 100px;
+    padding-bottom: 50px;
+    box-sizing: border-box;
+}
+
+.search
+{
+    width: 40%;
+    height: 45px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #a1a1a1;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+}
+
+.search i 
+{
+    margin-left: 5%;
+    color: white;
+    cursor: pointer;
+}
+
+.search input 
+{
+    width: 70%;
+    height: 30px;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    margin-left: 5%;
+    background-color: transparent;
+    color: white;
+    font-size: 20px;
+}
+
+/*--------------------------*/
+
+.notes
+{
+    width: 75%;
+    margin: 50px auto 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    box-sizing: border-box;
+}
+
+.notes div
+{
+    min-height: 200px;
+    margin: 15px;
+    padding: 30px;
+    flex-basis: 45.5%;
+    background-color: white;
+    border-radius: 15px;
+    font-size: 25px;
+    box-sizing: border-box;
+    overflow-x: auto;
+    position: relative;
+}
+
+.notes div button
+{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    color: #202020;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    background-color: transparent;
+}
+.notes div button:hover
+{
+    color: #ff1111;
+}
+
+.notes h1
+{
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+/*--------------------------*/
+
+.btns
+{
+    position: fixed;
+    top: 75%;
+    right: 10%;
+}
+
+.btns div
+{
+    width: 60px;
+    height: 60px;
+    margin: 10px;
+    border-radius: 50%;
+    position: relative;
+    z-index: 10;
+}
+.t, .a
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.add
+{
+    background-color: #ffdb11;
+}
+
+.erase
+{
+    background-color:  #ff1111;
+}
+
+
+.btns input
+{
+    height: 50px;
+    width: 280px;
+    position: absolute;
+    transform: translate(-85%, 83px);
+    border: 3px solid #ffdb11;
+    outline: none;
+    box-shadow: none;
+    border-radius: 10px;
+    font-size: 20px;
+    padding-left: 10px;
+    padding-right: 40px;
+    display: none;
+}
+
+/*--------------------------*/
+
+body::-webkit-scrollbar {
+    width: 12px;               /* width of the entire scrollbar */
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: #303030;        /* color of the tracking area */
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: #202020;    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+    border: 3px solid #202020;  /* creates padding around scroll thumb */
+  }
+
+
+
+  .notes div::-webkit-scrollbar {
+    height: 15px;    
+  }
+  
+  .notes div::-webkit-scrollbar-track {
+    background: white;  
+    border-radius: 25px; 
+  }
+  
+  .notes div::-webkit-scrollbar-thumb {
+    background-color: #303030;
+  }
+
+/*--------------------------*/
+
+@media only screen and (min-width: 1200px)
+{
+    .notes div
+    {
+        flex-basis: 30%;
+    }
+
+    .btns
+    {
+        top: 65%;
+        right: 5%;
+    }
+}
+@media only screen and (max-width: 900px)
+{
+    .notes div
+    {
+        flex-basis: 44%;
+    }
+
+}
+@media only screen and (max-width: 700px)
+{
+    .notes div
+    {
+        flex-basis: 80%;
+    }
+
+    .search
+    {
+        width: 50%;
+    }
+
+}
+
